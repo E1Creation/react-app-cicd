@@ -7,6 +7,9 @@ node{
             sh 'chmod +x ./jenkins/scripts/test.sh'
             sh './jenkins/scripts/test.sh'
         }
+         stage("Manual Approval"){
+         input message: 'Apakah anda setuju untuk mendeploy aplikasi ke dalam cloud ?'
+         }
         stage("Deploy"){
               sh 'chmod +x ./jenkins/scripts/deliver.sh'
               sh 'chmod +x ./jenkins/scripts/kill.sh'
