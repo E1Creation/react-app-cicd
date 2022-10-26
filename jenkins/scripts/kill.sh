@@ -6,3 +6,4 @@ echo 'was executed.'
 set -x
 sleep 60
 kill $(cat .pidfile)
+set +x
