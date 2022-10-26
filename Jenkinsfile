@@ -14,7 +14,7 @@ node{
               sh 'chmod +x ./jenkins/scripts/deliver.sh'
               sh 'chmod +x ./jenkins/scripts/kill.sh'
               sh './jenkins/scripts/deliver.sh'
-              Sleep time: 60, unit: 'SECONDS'
+              sh 'sleep 60'
                 sh './jenkins/scripts/kill.sh'
         }
     }
